@@ -9,11 +9,27 @@ public class Solution {
 
         double result = x;
 
-        for (int i = 0; i<n - 1; i++){
+        if(n == 0){
 
-            result *= x;
+            return 1;
         }
 
-        return result;
+        result = myPow(x,n/2);
+
+        if(n % 2 == 0){
+
+            return result * result;
+        }else{
+
+            if(n > 0){
+
+                return x * result * result;
+            }else{
+
+                return (result * result) / x;
+            }
+
+        }
+
     }
 }

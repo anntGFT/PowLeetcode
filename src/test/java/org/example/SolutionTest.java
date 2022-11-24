@@ -38,4 +38,26 @@ public class SolutionTest {
         assertEquals(result, solution.myPow(x,n));
 
     }
+
+    @Test
+    public void FiveRaisedToThePowerZero(){
+
+        x = 5;
+        n = 0;
+        result = 1;
+
+        assertEquals(result, solution.myPow(x,n));
+
+    }
+
+    @Test
+    public void FourRaisedToThePowerMinusFour(){
+
+        x = 4;
+        n = -4;
+        result = 0.00390625;
+
+        assertEquals(result, solution.myPow(x,n));
+
+    }
 }
